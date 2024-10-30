@@ -286,6 +286,15 @@ Snippet (HTML): cnt
   line-height: 22px;
 }
 
+body {
+  --_access-icon-top: 170px;
+  --_access-icon-left: unset;
+  --_access-icon-right: 50px;
+  --_access-icon-bottom: unset;
+  --_access-icon-border-radius: 50%;
+  --_access-icon-border: 0.5px solid white;
+}
+
 .footer {
   background-color: #333333;
   height: 110px;
