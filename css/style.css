@@ -1,0 +1,362 @@
+@font-face {
+  font-family: "OpenSans";
+  font-display: swap;
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  font-display: swap;
+  src: url("../fonts/OpenSans-SemiBold.woff2") format("woff2"), url("../fonts/OpenSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons.eot?re7qbp");
+  src: url("../fonts/icons.eot?re7qbp#iefix") format("embedded-opentype"), url("../fonts/icons.ttf?re7qbp") format("truetype"), url("../fonts/icons.woff?re7qbp") format("woff"), url("../fonts/icons.woff2?re7qbp") format("woff2"), url("../fonts/icons.svg?re7qbp#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class*=icon-]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icons" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook:before {
+  content: "\e900";
+}
+
+.icon-twitter:before {
+  content: "\e901";
+}
+
+.icon-youtube:before {
+  content: "\e902";
+}
+
+.icon-linkedin-in:before {
+  content: "\e903";
+}
+
+.icon-book-open:before {
+  content: "\e904";
+}
+
+.icon-angle-right:before {
+  content: "\e905";
+}
+
+.icon-worning:before {
+  content: "\e906";
+  color: #eb5757;
+  margin-right: 5px;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  line-height: 1;
+  font-family: "OpenSans", sans-serif;
+  font-size: 18px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+input,
+button,
+textarea {
+  font-family: "OpenSans", sans-serif;
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+}
+
+a {
+  transition: color 0.3s ease 0s;
+  color: inherit;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+body {
+  color: #fff;
+  background-color: #0c0b08;
+  line-height: 25px;
+}
+
+.lock body {
+  overflow: hidden;
+  touch-action: none;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.wrapper > main {
+  position: relative;
+  z-index: 2;
+  flex: 1 1 auto;
+}
+
+.wrapper > * {
+  min-width: 0;
+}
+
+/*
+(i) Styles will apply to
+to all classes containing *__container
+For example, header__container, main__container, etc.
+Snippet (HTML): cnt
+*/
+
+[class*=__container] {
+  position: relative;
+  z-index: 2;
+  max-width: 81.25rem;
+  box-sizing: content-box;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
+}
+
+[class*=__container_wide] {
+  max-width: 105rem;
+}
+
+.header {
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 10;
+  background-color: transparent;
+  transition: all 0.7s ease-in-out;
+}
+
+.header__logo {
+  font-size: 28px;
+  color: #28a745;
+  padding-top: 26px;
+  text-align: center;
+  transition: All 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header__logo:hover,
+.header__logo:focus {
+  transform: scale(1.05);
+  color: #2ebf4f;
+}
+
+.header__logo-text-right {
+  color: #fff;
+  margin-left: 8px;
+}
+
+.header__menu {
+  align-self: center;
+  padding-top: 20px;
+}
+
+.header__list {
+  text-align: center;
+}
+
+.header__list-item {
+  display: inline-block;
+  position: relative;
+}
+
+.header__list-item:hover:before,
+.header__list-item:focus::before {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.25s;
+}
+
+.header__list-item::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #28a745;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s;
+}
+
+.header__list-item:not(:last-child) {
+  margin-right: 12px;
+}
+
+.header--fixed {
+  opacity: 0.8;
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333333;
+  animation: showElement;
+  animation-duration: 0.7s;
+}
+
+@keyframes showElement {
+  0% {
+    opacity: 0;
+    top: -70px;
+  }
+
+  100% {
+    opacity: 0.8;
+    top: 0;
+  }
+}
+
+.header__content {
+  height: 120px;
+  font-size: 16px;
+  justify-content: space-between;
+  line-height: 22px;
+}
+
+.footer {
+  background-color: #333333;
+  height: 110px;
+  align-self: center;
+  text-align: center;
+  width: 100%;
+}
+
+.footer__list {
+  font-size: 35px;
+  padding-top: 20px;
+}
+
+.footer__list-tem {
+  display: inline-block;
+}
+
+.footer__list-tem:not(:last-child) {
+  margin-right: 25px;
+}
+
+.footer__link {
+  transition: All 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer__link:hover,
+.footer__link:focus {
+  color: #28a745;
+}
+
+.footer__copyright {
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+@media (min-width: 47.99875em) {
+  .header__logo {
+    font-size: 35px;
+    align-self: center;
+    padding-top: 0px;
+  }
+
+  .header__menu {
+    align-self: center;
+    padding-top: 0px;
+  }
+
+  .header__list-item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  .header__content {
+    display: flex;
+    font-size: 18px;
+    height: 70px;
+  }
+
+  .footer__copyright {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+
+@media (min-width: 83.125em) {
+  .header__logo {
+    align-self: center;
+  }
+
+  .header__list-item:not(:last-child) {
+    margin-right: 40px;
+  }
+}

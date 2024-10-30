@@ -1,0 +1,1 @@
+(()=>{"use strict";const e="Finance_Ledger_cache_v1";self.addEventListener("install",(t=>{t.waitUntil(caches.open(e))})),self.addEventListener("fetch",(t=>{"image"===t.request.destination&&t.respondWith(caches.open(e).then((async e=>{const n=await e.match(t.request),s=fetch(t.request).then((n=>(e.put(t.request,n.clone()),n)));return n||s})))}))})();
